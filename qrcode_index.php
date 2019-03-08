@@ -23,8 +23,8 @@ if(isset($_POST['submit']) ) {
     $firstname =  $_POST['firstname'];
     $filename = getUsernameFromEmail($email);
     $body =  $_POST['msg'];
-    $codeContents = $codeContents = 'card.php';
-    QRcode::png($codeContents, $tempDir.''.$filename.'.png', QR_ECLEVEL_L, 5);
+    //$codeContents = $codeContents = 'display:'.$email.'?subject='.urlencode($subject).'&body='.urlencode($body);
+    QRcode::png("https://cmm004group-e.github.io/sprint_A1_V5-master-master/", $tempDir.''.$filename.'.png', QR_ECLEVEL_L, 5);
 }
 ?>
 <!DOCTYPE html>
